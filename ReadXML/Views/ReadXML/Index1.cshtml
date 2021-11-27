@@ -1,0 +1,14 @@
+﻿@using System.Xml
+
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<!-- 接資料 -->
+@model System.Xml.XmlNodeList
+
+@foreach (XmlNode node in Model) {
+    <div>@node.ChildNodes[1].InnerText</div>
+}
+

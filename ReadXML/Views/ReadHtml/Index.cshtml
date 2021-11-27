@@ -1,0 +1,25 @@
+﻿@using HtmlAgilityPack
+
+@model HtmlAgilityPack.HtmlNode
+
+@{
+    Layout = null; // 不套版
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (HtmlNode node in Model.ChildNodes)
+{
+    if (node.Name == "tr")
+    {
+        foreach (var cNode in node.ChildNodes)
+        {
+            if (cNode.Name == "th" || cNode.Name == "td")
+            {
+                <div>@cNode.InnerText</div>
+            }
+        }
+    }
+}
+

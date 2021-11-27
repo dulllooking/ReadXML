@@ -1,0 +1,14 @@
+﻿@using System.Xml
+
+@{
+    ViewBag.Title = "Index";
+
+    // 初始化Controller內C#我要的型別
+    XmlNodeList xmlNodes = (XmlNodeList)ViewBag.ChildNodes;
+}
+<!-- 用()確定C#的變數範圍 -->
+<h2>@(ViewBag.TitleOne)1</h2>
+@foreach (XmlNode xmlNode in xmlNodes) 
+{
+    <div>@xmlNode.ChildNodes[1].InnerText</div>
+}
