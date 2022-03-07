@@ -16,8 +16,8 @@ namespace ReadXML.Controllers
             xmlDocument.Load ("http://tbike-data.tainan.gov.tw/Service/StationStatus/Xml");
             XmlNode root = xmlDocument.DocumentElement;
             XmlNodeList xmlNodes = root.ChildNodes; // 資料在第二層
-            ViewBag.ChildNodes = xmlNodes; //ViewBag.後名稱自訂
-            ViewBag.TitleOne = "Read XML"; //ViewBag.後名稱自訂
+            ViewBag.ChildNodes = xmlNodes; // ViewBag.後名稱自訂
+            ViewBag.TitleOne = "Read XML"; // ViewBag.後名稱自訂
             return View();
         }
 
